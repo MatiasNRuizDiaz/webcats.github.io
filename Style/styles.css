@@ -1,8 +1,12 @@
 :root {
-  --textTitle: 5rem;
-  --textTitle2: 3.3rem;
+
+  /* Fuentes */
+  --textTitle: 3rem;
+  --textTitle2: 2.3rem;
   --textFont: 1.5rem;
   --textFont2: 2rem;
+
+  /* Colores */
   --black: #070606;
   --bluechill: #3131a3b4;
   --blue: #60b3be;
@@ -21,16 +25,143 @@
 }
 
 body {
-  background-image: linear-gradient(#f8f8f8,#60b3be);
+  background: linear-gradient(to bottom, #f8f8f8, #3131a3b4);
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
   font-family: 'Nunito', sans-serif;
 }
 
-html {
-  font-size: 62.5%;
-  box-sizing: border-box;
-  /* Hack para Box Model **/
+/* SCROll BAR */ 
+
+body::-webkit-scrollbar {
+  width: 10px;
 }
 
+body::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green);    
+  border: none ;  
+}
+
+/* HEADER */
+
+.header {
+  background-image: url(../img/header-cat2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+
+
 /* MENU*/
+
+.logoBox {
+  font-size: var(--textFont2);
+  padding: 20px;
+  text-align: center;
+}
+
+.logoBox a {
+  color: var(--black);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.logoBox a:hover {
+  color: var(--bluechill);
+}
+
+/* MENU */
+
+.navBg {
+  background-color: var(--green);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navBar a {
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--textFont);
+  font-weight: 300;
+  padding: 1rem;
+
+}
+
+.navBar a:hover {
+  color: var(--white);
+  background-color: var(--bluechill);
+  transition: calc(0.4s);
+}
+
+/* WELCOME */
+
+.welcome {
+  width: 50%;
+  height: 90%;
+  font-size: var(--textTitle);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  color: var(--white);
+}
+
+.socialMediasEnd {
+  position: fixed;
+	right: 0;
+	top: 45%;
+	font-size: var(--textFont2);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	z-index: 100;
+}
+
+.iconBar{
+  color: var(--white);
+  text-decoration: none;
+  padding: .7rem;
+  display: flex;
+  transition: all .4s;
+}
+
+.iconFacebook{
+  background: #2E406E;
+}
+
+.iconTwitter{
+  background: #339DC5;
+}
+
+.iconLinkedin{
+  background: #517fa4;
+}
+
+.iconInstagram{
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.iconBar:first-child{
+  border-radius: 1rem 0 0 0;
+}
+
+.iconBar:last-child{
+  border-radius: 0 0 0 1rem;
+}
+
+.iconBar:hover{
+  padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
